@@ -11,7 +11,7 @@ class ServiseAPI {
     static var apiSingl = ServiseAPI()
     private init() {}
 
-    let jsonUrl = "https://www.nbrb.by/api/exrates/currencies"
+    let jsonUrl = "https://www.nbrb.by/api/exrates/rates?periodicity=0"
     func fetchUrlSession(completionHandler: @escaping ([Currency]) -> Void) {
         guard let url = URL(string: jsonUrl) else { return }
         let session = URLSession.shared

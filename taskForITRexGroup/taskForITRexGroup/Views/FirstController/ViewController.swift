@@ -17,7 +17,7 @@ class ViewController: UIViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let currencyViewController = segue.destination as? CurrencyViewController {
-            currencyViewController.currancys = currancys
+            currencyViewController.remuveCurrency(currancys)
         } 
     }
     
@@ -29,5 +29,6 @@ class ViewController: UIViewController {
             }
         }
     }
+    
 }
 
