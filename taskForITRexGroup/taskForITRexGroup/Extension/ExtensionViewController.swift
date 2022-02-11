@@ -22,7 +22,6 @@ extension ViewController: UITextFieldDelegate {
         } else {
             numberOfDecimalDigits = 0
         }
-
         return isNumeric && numberOfDots <= 1 && numberOfDecimalDigits <= 2
     }
 }
@@ -35,7 +34,7 @@ extension ViewController: DelegatReturnSelectCurrency {
         pikCurrancy = currency
         buttonCurrency.setTitle(currency.curAbbreviation, for: .normal)
         labelFullDescription.text = createTitleCurrancy(currency)
-        flagFirstCurrency.image = OtherFuncForWorkWithTableAndCell.otherFuncSingl.getFlagImage(currency.curAbbreviation)
+        flagFirstCurrency.image = UIImage(named: IconFlag(name: currency.curAbbreviation).iconNameString)
     }
     func createTitleCurrancy(_ currancy: Currency) -> String {
         let title = """

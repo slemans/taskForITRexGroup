@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7F1BC86627B441500008D532 /* OtherFuncForWorkWithTableAndCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1BC86527B441500008D532 /* OtherFuncForWorkWithTableAndCell.swift */; };
 		7F1BC86B27B6E3D40008D532 /* ExtensionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1BC86A27B6E3D30008D532 /* ExtensionViewController.swift */; };
 		7F1BC86D27B6E4B30008D532 /* OtherFuncForViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1BC86C27B6E4B30008D532 /* OtherFuncForViewController.swift */; };
 		7F1BC86F27B6E6250008D532 /* ExtensionCurrencyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1BC86E27B6E6250008D532 /* ExtensionCurrencyViewController.swift */; };
+		7F1BC87127B6EED90008D532 /* IconFlag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1BC87027B6EED90008D532 /* IconFlag.swift */; };
 		7FF5624D27B291970081838F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF5624C27B291970081838F /* AppDelegate.swift */; };
 		7FF5624F27B291970081838F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF5624E27B291970081838F /* SceneDelegate.swift */; };
 		7FF5625127B291970081838F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF5625027B291970081838F /* ViewController.swift */; };
@@ -24,10 +24,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		7F1BC86527B441500008D532 /* OtherFuncForWorkWithTableAndCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherFuncForWorkWithTableAndCell.swift; sourceTree = "<group>"; };
 		7F1BC86A27B6E3D30008D532 /* ExtensionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionViewController.swift; sourceTree = "<group>"; };
 		7F1BC86C27B6E4B30008D532 /* OtherFuncForViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherFuncForViewController.swift; sourceTree = "<group>"; };
 		7F1BC86E27B6E6250008D532 /* ExtensionCurrencyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionCurrencyViewController.swift; sourceTree = "<group>"; };
+		7F1BC87027B6EED90008D532 /* IconFlag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconFlag.swift; sourceTree = "<group>"; };
 		7FF5624927B291970081838F /* taskForITRexGroup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = taskForITRexGroup.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FF5624C27B291970081838F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7FF5624E27B291970081838F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,7 +56,6 @@
 		7F1BC86727B4419B0008D532 /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				7F1BC86527B441500008D532 /* OtherFuncForWorkWithTableAndCell.swift */,
 				7F1BC86C27B6E4B30008D532 /* OtherFuncForViewController.swift */,
 			);
 			path = Service;
@@ -98,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				7FF5626927B2A7F40081838F /* Currency.swift */,
+				7F1BC87027B6EED90008D532 /* IconFlag.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -246,13 +246,13 @@
 				7FF5626A27B2A7F40081838F /* Currency.swift in Sources */,
 				7F1BC86B27B6E3D40008D532 /* ExtensionViewController.swift in Sources */,
 				7FF5626827B2A7630081838F /* CurrencyViewController.swift in Sources */,
+				7F1BC87127B6EED90008D532 /* IconFlag.swift in Sources */,
 				7F1BC86F27B6E6250008D532 /* ExtensionCurrencyViewController.swift in Sources */,
 				7FF5624D27B291970081838F /* AppDelegate.swift in Sources */,
 				7FF5626D27B2A8F30081838F /* ServiseAPI.swift in Sources */,
 				7F1BC86D27B6E4B30008D532 /* OtherFuncForViewController.swift in Sources */,
 				7FF5627127B2B63F0081838F /* TableViewCell.swift in Sources */,
 				7FF5624F27B291970081838F /* SceneDelegate.swift in Sources */,
-				7F1BC86627B441500008D532 /* OtherFuncForWorkWithTableAndCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

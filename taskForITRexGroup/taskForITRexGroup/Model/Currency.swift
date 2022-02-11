@@ -6,7 +6,7 @@
 //
 
 
-import Foundation
+import UIKit
 
 // MARK: - WelcomeElement
 struct Currency: Codable {
@@ -21,6 +21,7 @@ struct Currency: Codable {
         case curName = "Cur_Name"
         case curOfficialRate = "Cur_OfficialRate"
     }
+    
     init?(currency: Currency) {
         curID = currency.curID
         curAbbreviation = currency.curAbbreviation
@@ -29,3 +30,5 @@ struct Currency: Codable {
         curOfficialRate = currency.curOfficialRate
     }
 }
+
+

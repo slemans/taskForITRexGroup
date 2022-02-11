@@ -19,6 +19,6 @@ class TableViewCell: UITableViewCell {
     func getCurrenc(_ name: String, _ abbreviation: String) {
         codeCurryncy.text = name
         currencyAbbreviation.text = abbreviation
-        flagCurrency.image = OtherFuncForWorkWithTableAndCell.otherFuncSingl.getFlagImage(abbreviation)
+        flagCurrency.image = UIImage(named: IconFlag(name: abbreviation).iconNameString)
     }
 }

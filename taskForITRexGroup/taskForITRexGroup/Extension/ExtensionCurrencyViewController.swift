@@ -44,7 +44,7 @@ extension CurrencyViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let carrenc = currancys[indexPath.row]
         lableChousCurrency.text = carrenc.curAbbreviation
-        imageChousCurrency.image = OtherFuncForWorkWithTableAndCell.otherFuncSingl.getFlagImage(carrenc.curAbbreviation)
+        imageChousCurrency.image = UIImage(named: IconFlag(name: carrenc.curAbbreviation).iconNameString)
         selectCurrency = carrenc
     }
 }
