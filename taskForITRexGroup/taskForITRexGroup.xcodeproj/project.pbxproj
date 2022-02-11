@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F1BC86627B441500008D532 /* OtherFuncForWorkWithTableAndCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F1BC86527B441500008D532 /* OtherFuncForWorkWithTableAndCell.swift */; };
 		7FF5624D27B291970081838F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF5624C27B291970081838F /* AppDelegate.swift */; };
 		7FF5624F27B291970081838F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF5624E27B291970081838F /* SceneDelegate.swift */; };
 		7FF5625127B291970081838F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF5625027B291970081838F /* ViewController.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7F1BC86527B441500008D532 /* OtherFuncForWorkWithTableAndCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherFuncForWorkWithTableAndCell.swift; sourceTree = "<group>"; };
 		7FF5624927B291970081838F /* taskForITRexGroup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = taskForITRexGroup.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FF5624C27B291970081838F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7FF5624E27B291970081838F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +47,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7F1BC86727B4419B0008D532 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				7F1BC86527B441500008D532 /* OtherFuncForWorkWithTableAndCell.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		7FF5624027B291970081838F = {
 			isa = PBXGroup;
 			children = (
@@ -64,6 +74,7 @@
 		7FF5624B27B291970081838F /* taskForITRexGroup */ = {
 			isa = PBXGroup;
 			children = (
+				7F1BC86727B4419B0008D532 /* Service */,
 				7FF5626327B294990081838F /* Constants */,
 				7FF5626227B2948E0081838F /* Extension */,
 				7FF5626027B294450081838F /* Model */,
@@ -237,6 +248,7 @@
 				7FF5626D27B2A8F30081838F /* ServiseAPI.swift in Sources */,
 				7FF5627127B2B63F0081838F /* TableViewCell.swift in Sources */,
 				7FF5624F27B291970081838F /* SceneDelegate.swift in Sources */,
+				7F1BC86627B441500008D532 /* OtherFuncForWorkWithTableAndCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

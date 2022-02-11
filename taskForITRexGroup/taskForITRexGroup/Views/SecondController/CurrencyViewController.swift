@@ -7,14 +7,23 @@
 
 import UIKit
 
+protocol DelegatReturnSelectCurrency: AnyObject {
+    func returnCurrency(_ currency: Currency?)
+}
+
 class CurrencyViewController: UIViewController {
 
 
+    @IBOutlet weak var stackViewCurrency: UIStackView!
+    @IBOutlet weak var buttonPostCurrency: UIButton!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var lableChousCurrency: UILabel!
+    @IBOutlet weak var imageChousCurrency: UIImageView!
 
+    weak var delegate: DelegatReturnSelectCurrency?
     var currancys: [Currency] = []
     var oldArrayCurrancys: [Currency] = []
-
+    var selectCurrency: Currency?
     let searchController = UISearchController()
 
     override func viewDidLoad() {
@@ -25,10 +34,18 @@ class CurrencyViewController: UIViewController {
         searchController.obscuresBackgroundDuringPresentation = false
         navigationItem.searchController = searchController
         definesPresentationContext = true
+        buttonPostCurrency.layer.cornerRadius = 20
+        stackViewCurrency.layer.cornerRadius = 20
     }
 
 
 
+    @IBAction func buttonPostCurrencyAction() {
+        if selectCurrency != nil {
+            delegate?.returnCurrency(selectCurrency)
+            navigationController?.popViewController(animated: true)
+        }
+    }
 
     func remuveCurrency(_ currancy: [Currency]) {
         var newCurrancy = currancy
@@ -50,7 +67,7 @@ extension CurrencyViewController: UISearchResultsUpdating {
             currancys = oldArrayCurrancys
             tableView.reloadData()
         } else {
-            if currancys.count != oldArrayCurrancys.count{
+            if currancys.count != oldArrayCurrancys.count {
                 filterCurrancys = oldArrayCurrancys.filter({ (item: Currency) -> Bool in
                     return item.curName.lowercased().contains(text.lowercased())
                 })
@@ -59,7 +76,6 @@ extension CurrencyViewController: UISearchResultsUpdating {
                     return item.curName.lowercased().contains(text.lowercased())
                 })
             }
-            
             currancys = filterCurrancys
             tableView.reloadData()
         }
@@ -77,31 +93,11 @@ extension CurrencyViewController: UITableViewDelegate, UITableViewDataSource {
         cell.getCurrenc(carrenc.curName, carrenc.curAbbreviation)
         return cell
     }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let carrenc = currancys[indexPath.row]
+        lableChousCurrency.text = carrenc.curAbbreviation
+        imageChousCurrency.image = OtherFuncForWorkWithTableAndCell.otherFuncSingl.getFlagImage(carrenc.curAbbreviation)
+        selectCurrency = carrenc
+    }
 }
-//
-//extension CurrencyViewController: UISearchBarDelegate {
-//    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-//        if searchBar.text?.isEmpty == true {
-//            searchActive = false
-//            searchBar.resignFirstResponder() // останавливаем и выходим из searchBar
-//            tableView.reloadData()
-//        } else {
-//            searchActive = true
-//            print(searchText)
-//
-//            var arratString: [String] = []
-//            var newArratString: [String] = []
-//            for item in currancys {
-//                arratString.append(item.curName)
-//            }
-//
-//            for (index, item) in currancys.enumerated() {
-//                if item.curName == searchText {
-//                    print(item)
-//                }
-//            }
-//            tableView.reloadData()
-//        }
 
-
-//}
